@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+      </head>
+      <body style="background-color:rgb(247, 76, 76); width: 100%; height: 100%;">
+         <center>
+            <div style="height: 400px;
+            width: 400px;
+            margin-top: 200px;
+            background-color: whitesmoke;
+            align-content: center;
+            text-align: center;
+            border-radius: .5cm;">
+               {% if not short_url %}
+               <br><br><br>
+               <h4 style="font-size: 28px;">Enter URL to shorten.</h4>
+               <br><br><br>
+               <form method="post" class="navbar-form navbar-center" action="">
+                  <div class="form-group">
+                     <input type="text" id="url" name="url" class="form-control input-lg chat-input" placeholder="URL" />
+                     <button type="submit" class="btn btn-lg btn-info">Submit</button>
+                  </div>
+               </form>
+               {% else %}
+               <br><br><br><br>
+               
+               <div style="font-size: 28px; text-align: center; margin-top: 80px;">
+                 Enjoy, your shortened URL is: <br> <a href="{{short_url}}"> {{short_url}}</a>
+               </div>
+               {% endif %}
+               <br><br><br><br>
+               <footer>
+                  <p>&copy; Prateek 2020</p>
+               </footer>
+            </div>
+         </center>
+      </body>
+   </html>
